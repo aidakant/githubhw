@@ -2,6 +2,9 @@ from masks import get_mask_account, get_mask_card_number
 
 
 def mask_account_card(account_or_card_info: str) -> str:
+    """
+    Маскируем номер карты или счета в строке.
+    """
     account_or_card_info_number = account_or_card_info.split(" ")[-1]
     account_or_card_info_id = " ".join(account_or_card_info.split(" ")[:-1])
 
@@ -16,6 +19,9 @@ def mask_account_card(account_or_card_info: str) -> str:
 
 
 def get_date(string_date: str) -> str:
+    """
+    Преобразуем дату из формата ISO в DD.MM.YYYY.
+    """
     date = string_date.split("T")[0]
     date_list = date.split("-")
     date_list = date_list[::-1]
