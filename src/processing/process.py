@@ -1,4 +1,5 @@
-def filter_by_state(operations_list: list[dict], state: str = 'EXECUTED') -> list[dict]:
+def filter_by_state(operations_list: list[dict],
+                    state: str = 'EXECUTED') -> list[dict]:
     """
     Фильтруем список операций по статусу.
     Возвращаем только те операции, у которых ключ 'state'
@@ -13,7 +14,8 @@ def filter_by_state(operations_list: list[dict], state: str = 'EXECUTED') -> lis
     return filtered_list
 
 
-def sort_by_date(operations_list: list[dict], reverse: bool = True) -> list[dict]:
+def sort_by_date(operations_list: list[dict],
+                 reverse: bool = True) -> list[dict]:
     """
     Сортирует список операций по дате.
     """

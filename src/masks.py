@@ -2,6 +2,7 @@ def get_mask_card_number(card_number: str) -> str:
     """
     Маскируем номер банковской карты,
     оставляя видимыми первые 6 и последние 4 цифры.
+
     """
     masked = ""
     split_masked = ""
@@ -13,7 +14,7 @@ def get_mask_card_number(card_number: str) -> str:
             masked += card_number[i]
 
     for i in range(len(masked)):
-        if i % 4 == 0:
+        if i % 4 == 0 and i > 0:
             split_masked += " " + masked[i]
         else:
             split_masked += masked[i]
